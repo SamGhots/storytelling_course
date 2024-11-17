@@ -1,0 +1,33 @@
+.course-video {
+  background-color: #ffffff;
+  padding: 40px;
+}
+.course-video-title{
+  text-align: center;
+  letter-spacing: 0.4px;
+  margin-bottom: 30px;
+}
+
+.course-section__video{
+  display: flex;
+justify-content: center;
+}
+
+iframe{
+
+ 
+}
+
+
+@media (min-width: 767px) {
+  .course-video-title h2  {
+    font-size: 38px;
+    letter-spacing: 0.4px;
+}
+}
+@media (max-width: 767px) {
+  .course-video-title h2  {
+      font-size: 23px;
+      letter-spacing: 0.4px;
+  }
+}

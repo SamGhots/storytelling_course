@@ -1,0 +1,21 @@
+.troubleshoot-section{
+  background-color: #ffffff;
+}
+
+.troubleshoot-section h2{
+  color: #000000;
+
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+text-align: center;
+
+}
+@media (max-width: 767px) {
+  .troubleshoot-section h2
+  {
+    font-size: 23px;
+  }
+
+}
+

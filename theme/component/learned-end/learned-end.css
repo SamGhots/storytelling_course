@@ -1,0 +1,78 @@
+.learned-end-section {
+  
+  position: relative;
+  gap: 10px;
+
+}
+.learned-end-section ::before{
+  background-color: transparent;
+    background-image: linear-gradient(180deg, #114295 0%, #000000 100%);
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind content */
+}
+
+.learned-end-title{
+  color: #ffde59;
+  text-align: center;
+}
+.learned-end-box{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+}
+.learned-end-item{
+  display: grid;
+  padding: 10px;
+  gap: 10px;
+}
+.learned-end-img{
+  text-align: center;
+
+}
+.learned-end-img img{
+  max-width: 100%;
+}
+.learned-end-text{
+
+}
+.learned-end-text h2{
+  font-size: 20px;
+  color: #ffffff;
+ 
+  font-weight: 400;
+}
+
+
+@media (min-width:767px) {
+  .learned-end-box{
+    display: grid;
+    margin-top: 30px;
+
+  }
+  .learned-end-item{
+    grid-template-columns: 1fr 1fr;
+    gap: 50px
+    ;
+  }
+  .learned-end-text h2{
+    font-size: 26px;
+  }
+  .learned-end-text{
+display: grid;
+align-items: center;
+  }
+  .learned-end-box{
+    padding: 0px;
+  }
+}
+@media (max-width:767px) {
+  .learned-end-text h2 {
+    line-height: 26px;
+}
+}

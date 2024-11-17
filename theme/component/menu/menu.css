@@ -1,0 +1,115 @@
+.dropdown {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 16px;
+}
+
+.dropdown-button {
+  
+  background: linear-gradient(135deg, rgb(14, 150, 228), #114295);
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+
+  border-radius: 5px;
+  outline: none;
+  transition: transform 0.5s ease, background-color 0.4s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow here */
+}
+
+/* Lines for Hamburger Menu */
+.dropdown-button span {
+  display: block;
+  width: 20px;  /* กำหนดขนาดของเส้นให้เล็กลง */
+  height: 2px;
+  background-color: white; /* สีของเส้น */
+  margin: 1px 0;  /* ลดระยะห่างระหว่างเส้น */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.dropdown-content {
+  display: block; /* Default display is block for the content */
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 100%; /* Set a fixed width for the dropdown */
+  opacity: 0; /* Start as invisible */
+  transform: translateY(10px); /* Start below the button */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow here */
+  bottom: 36px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+pointer-events: none; /* Prevent interactions when hidden */
+}
+
+/* Animation when the dropdown is open */
+.dropdown-button.open + .dropdown-content {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
+  pointer-events: auto; /* Allow interactions when visible */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px ;
+  text-decoration: none;
+  display: flex; /* Use flexbox for icons */
+  justify-content: center; /* Center icons horizontally */
+  align-items: center; /* Center icons vertically */
+  margin: 5px 0; /* Space between each icon */
+}
+
+.dropdown-content a i {
+  font-size: 18px; /* Adjust size of icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+.dropdown-content a i:hover {
+  transform: scale(1.5); 
+}
+.dropdown-content a:hover {
+  background-color: #99c4ff71;
+}
+
+/* Animation to change Hamburger to X */
+.dropdown-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.dropdown-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.dropdown-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* เปลี่ยนสีพื้นหลังปุ่มเมื่อเมนูเปิด */
+.dropdown-button.open {
+  background-color: #f44336; /* สีพื้นหลังเมื่อเปิดเมนู */
+}
+.dropdown-content .fa-solid.fa-house{
+  color: rgb(3, 74, 175);
+}
+.dropdown-content .fa-solid.fa-magnifying-glass{
+  color: #d27205;
+}
+.dropdown-content .fa-solid.fa-phone{
+color: rgb(10, 160, 5);
+}
+.dropdown-content .fa-brands.fa-facebook{
+  color: #16a8dd;
+}
+.dropdown-content .fa-brands.fa-line{
+  color: rgb(12, 199, 46);
+}

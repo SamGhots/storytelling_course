@@ -1,0 +1,103 @@
+/* nav */
+.section1{
+  padding: 10px 20px 10px 20px;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #114295;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+
+
+/*box1📦 logo*/
+.logo-nav{
+  display: grid;
+  align-items: center;
+}
+.logo-nav img {
+  width: 100px;
+  transition: transform 0.3s ease; /* ใช้ transition สำหรับการเปลี่ยนแปลงการเปลี่ยนแปลงการขยาย */
+  cursor: pointer;
+  /* ขนาดที่เหมาะสม */
+}
+.logo-nav img:hover {
+  transform: scale(1.2);
+}
+/*box2📦 warn*/
+.contact-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: white;
+  position: relative;
+  
+}
+
+
+.contact i{
+  font-size: 20px;
+  color: #ffffff ;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+/* Hover effect */
+.contact i:hover {
+  color: #007bff; /* Change to a different color on hover (blue in this case) */
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+.contact i.fa-line:hover {
+  color: #00c300; /* Green color for Line icon */
+}
+.contact i.fa-phone:hover {
+  color: #e6f445; /* Green color for Line icon */
+}
+
+
+
+@media (min-width: 1700px) {
+  .section1{
+    padding: 10px 100px 10px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section1{
+    padding: 10px 100px 10px 100px;
+  }
+}
+
+@media (max-width: 968px) {
+  .section1{
+    padding: 10px 40px 10px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1{
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .section1{
+    padding: 10px 10px 10px 10px;
+  }
+}

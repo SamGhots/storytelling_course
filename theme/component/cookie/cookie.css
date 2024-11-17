@@ -1,0 +1,194 @@
+
+/*-- desktop --*/
+@media (min-width:767px) {
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+  
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: background-size 0.5s ease; /* Transition for background-size */
+    background-image: linear-gradient(to bottom, #fff, #fff); /* Default background */
+    background-size: 100% 200%; /* Size for the gradient */
+    background-position: top; /* Default position */
+  
+  
+  
+    
+  }
+  .cookie-banner:hover {
+    background-image: linear-gradient(to bottom, #00f, #0cf); /* Gradient from top to bottom with blue shades */
+    background-position: bottom; /* Position gradient to bottom on hover */
+    color: #ffffff;
+  }
+  .cookie-banner:hover .close-btn   {
+  
+    border: 2px solid #ffffff; /* Beige border */
+    color: #ffffff;
+  }
+  .cookie-banner .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 23px; /* Fixed width */
+    height: 23px; /* Fixed height */
+    border: 2px solid #ffffff; /* Beige border */
+    border-radius: 50%; /* Circular shape */
+    background-image: linear-gradient(to bottom, #00f, #0cf);
+  }
+  
+  .cookie-banner .close-btn:hover {
+    color: #000;
+  }
+  
+  .cookie-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+  }
+  
+  .cookie-title {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .cookie-content {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .accept-btn {
+    background: linear-gradient(135deg, rgb(14, 150, 228), #114295);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .accept-btn:hover {
+    background: linear-gradient(135deg, rgba(14, 149, 228, 0.558), #114195b1);
+    
+  }
+}
+/*-- mobile--*/
+@media (max-width:767px) {
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%; /* ใช้ความกว้างเต็มที่ของหน้าจอ */
+    background-color: #fff;
+    padding: 15px; /* ลดการเติมพื้นที่ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* ลดเงา */
+    border-radius: 8px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: background-size 0.5s ease, background-position 0.5s ease;
+ 
+    background-size: 100% 100%;
+    background-position: top;
+  }
+  
+  .cookie-banner:hover {
+    background-image: linear-gradient(to bottom, #00f, #0cf);
+    background-size: 100% 200%;
+    background-position: bottom;
+    color: #ffffff;
+  }
+  
+  .cookie-banner:hover .close-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .cookie-banner .close-btn {
+    position: absolute;
+    top: 10px; /* ลดตำแหน่งจากด้านบน */
+    right: 10px; /* ลดตำแหน่งจากด้านขวา */
+    background: none;
+    border: 2px solid #ffffff;
+    font-size: 18px; /* ลดขนาดตัวอักษร */
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* ขนาดปุ่มให้เล็กลง */
+    height: 30px; /* ขนาดปุ่มให้เล็กลง */
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #00f, #0cf);
+  }
+  
+  .cookie-banner .close-btn:hover {
+    color: #000;
+  }
+  
+  .cookie-image {
+    width: 50px; /* ขนาดของรูปภาพให้เล็กลง */
+    height: 50px; /* ขนาดของรูปภาพให้เล็กลง */
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .cookie-title {
+    font-size: 18px; /* ขนาดตัวอักษรให้เล็กลง */
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .cookie-content {
+    font-size: 12px; /* ขนาดตัวอักษรให้เล็กลง */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .accept-btn {
+    background: linear-gradient(135deg, rgb(14, 150, 228), #114295);
+    color: white;
+    border: none;
+    padding: 8px 16px; /* ลดการเติมพื้นที่ */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* ขนาดตัวอักษรให้เล็กลง */
+    transition: background 0.3s;
+  }
+  
+  .accept-btn:hover {
+    background: linear-gradient(135deg, rgba(14, 149, 228, 0.558), #114195b1);
+  }
+  
+}

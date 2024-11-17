@@ -1,0 +1,220 @@
+.header-section {
+  display: grid;
+  position: relative;
+  gap: 20px 20px;
+  /* ระยะห่าง 20px ของเเต่ละ div*/
+}
+
+.header-section::before {
+  /*กําหนดสีพื้นหลัง*/
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #114295 0%, #000000 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Ensure it stays behind content */
+}
+
+.header-title {
+  color: #FFDE59;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px;
+
+}
+
+.header-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* กริด 2 คอลัมน์แบ่งพื้นที่เท่าๆ กัน */
+  gap: 20px;
+  /* ระยะห่างระหว่างภาพ */
+  justify-items: center;
+  /* จัดภาพให้อยู่กลางในคอลัมน์ */
+  align-items: center;
+  /* จัดภาพให้อยู่กลางในแนวตั้ง */
+}
+.header-img-box{
+  width: 50%;
+}
+.header-img {
+  padding: 10px;
+}
+
+.header-img img {
+  max-width: 100%;
+
+}
+
+.header-promotion {
+  display: grid;
+  padding: 10px;
+  gap: 20px;
+}
+
+.header-promotion h2 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #FFDE59;
+  text-align: center;
+  font-weight: 700;
+}
+
+.header-promotion .header-details h2 {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.header-cover {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.header-cover img {
+  max-width: 100%;
+
+}
+
+.header-button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.header-course {
+  font-size: 23px;
+  padding: 10px 42px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #FFDE59;
+  border: 3px solid rgb(11, 86, 109);
+  border-radius: 0;
+  cursor: pointer;
+  /* เพิ่ม cursor แบบ pointer เพื่อแสดงว่าปุ่มคลิกได้ */
+  transition: background-color 0.3s ease;
+  /* เพิ่ม transition เพื่อความนุ่มนวลเมื่อเปลี่ยนสี */
+  margin: 0px 30px;
+}
+
+
+.header-course:active {
+  background-color: #ffffff;
+  /* เปลี่ยนพื้นหลังเป็นสีขาวเมื่อกดปุ่ม */
+
+}
+
+.header-course a {
+  text-decoration: none;
+  /* ลบเส้นใต้จากลิงก์ */
+  color: inherit;
+  /* ให้สีของลิงก์สืบทอดมาจากปุ่ม */
+}
+
+.header-course-view {
+  font-size: 23px;
+  padding: 10px 42px;
+  border-radius: 8px;
+  font-weight: bold;
+  fill: #FFDE59;
+  color: #FFDE59;
+  background-color: #000000;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: #FFDE59;
+  cursor: pointer;
+  /* เพิ่ม cursor แบบ pointer เพื่อแสดงว่าปุ่มคลิกได้ */
+  transition: background-color 0.3s ease;
+  /* เพิ่ม transition เพื่อความนุ่มนวลเมื่อเปลี่ยนสี */
+}
+
+.header-course-view a {
+  text-decoration: none;
+  /* ลบเส้นใต้จากลิงก์ */
+  color: inherit;
+  /* ให้สีของลิงก์สืบทอดมาจากปุ่ม */
+}
+
+.header-course-view:active {
+  background-color: #ffffff;
+  /* เปลี่ยนพื้นหลังเป็นสีขาวเมื่อกดปุ่ม */
+
+}
+
+@media (min-width: 767px) {
+  .header-title {
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
+
+  .header-promotion h2 {
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    color: #FFDE59;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .header-promotion .header-details h2 {
+    font-size: 29px;
+
+  }
+
+  .header-course {
+    font-size: 43px;
+    margin: 0px 50px;
+  }
+
+  .header-course-view {
+    font-size: 43px;
+  }
+
+  .header-img img {
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
+
+  .header-promotion h2 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #FFDE59;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .header-promotion .header-details h2 {
+    font-size: 16px;
+
+  }
+
+  .header-course {
+    font-size: 23px;
+  }
+  .header-img-box{
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,22 @@
+.title-position-section{
+  background-color: #ffffff;
+}
+
+.title-position-section h2{
+  color: #000000;
+
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 29.9px;
+text-align: center;
+
+}
+@media (max-width: 767px) {
+  .title-position-section h2
+  {
+    font-size: 23px;
+  }
+
+}
+
